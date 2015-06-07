@@ -1,6 +1,7 @@
 package com.ambrogio.example.udacityapps.launcher;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.ambrogio.example.R;
+import com.ambrogio.example.udacityapps.sunshineapp.SunshineMainActivity;
 
 
 public class LauncherActivity extends Activity {
@@ -32,7 +34,7 @@ public class LauncherActivity extends Activity {
         //launches a lesson app depending on what menu item is selected
         switch (item.getItemId()) {
             case R.id.action_lesson_one:
-
+                startActivity(new Intent(LauncherActivity.this, SunshineMainActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
